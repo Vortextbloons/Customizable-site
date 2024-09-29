@@ -7,32 +7,32 @@ document.addEventListener('DOMContentLoaded', function() {
     customizationForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const backgroundColor = backgroundColorInput.value;
-        const font = fontInput.value;
-        const textSize = textSizeInput.value;
+        const customizationData = {
+            backgroundColor: backgroundColorInput.value,
+            font: fontInput.value,
+            textSize: textSizeInput.value
+        };
 
-        localStorage.setItem('backgroundColor', backgroundColor);
-        localStorage.setItem('font', font);
-        localStorage.setItem('textSize', textSize);
+        localStorage.setItem('customizationData', JSON.stringify(customizationData));
 
         alert('Customization saved!');
     });
 
     function applyCustomizations() {
-        const backgroundColor = localStorage.getItem('backgroundColor');
-        const font = localStorage.getItem('font');
-        const textSize = localStorage.getItem('textSize');
+        const customizationData = JSON.parse(localStorage.getItem('customizationData'));
 
-        if (backgroundColor) {
-            document.body.style.backgroundColor = backgroundColor;
-        }
+        if (customizationData) {
+            if (customizationData.backgroundColor) {
+                document.body.style.backgroundColor = customizationData.backgroundColor;
+            }
 
-        if (font) {
-            document.body.style.fontFamily = font;
-        }
+            if (customizationData.font) {
+                document.body.style.fontFamily = customizationData.font;
+            }
 
-        if (textSize) {
-            document.body.style.fontSize = textSize + 'px';
+            if (customizationData.textSize) {
+                document.body.style.fontSize = customizationData.textSize + 'px';
+            }
         }
     }
 
