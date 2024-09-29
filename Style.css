@@ -1,11 +1,13 @@
+/* The body CSS rules define the default styles for the entire page */
 body {
-    background-color: white;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: black;
+    background-color: white; /* Sets the background color of the page to white */
+    font-family: Arial, sans-serif; /* Sets the default font family to Arial */
+    font-size: 16px; /* Sets the default font size to 16 pixels */
+    color: black; /* Sets the default text color to black */
 }
 
+/* The #content CSS rules define the styles for the element with the id "content" */
 #content {
-    padding: 20px;
-    border-style: none;
+    padding: 20px; /* Adds 20 pixels of padding inside the content element */
+    border-style: none; /* Removes any border from the content element */
 }

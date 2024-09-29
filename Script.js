@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // This event listener waits for the entire HTML document to be loaded and parsed before executing the code inside it.
     const customizationForm = document.getElementById('customizationForm');
     const backgroundColorInput = document.getElementById('backgroundColor');
     const fontInput = document.getElementById('font');
@@ -7,9 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const borderStyleInput = document.getElementById('borderStyle');
 
     customizationForm.addEventListener('submit', function(event) {
+        // This event listener prevents the default form submission behavior and saves the customization data to local storage.
         event.preventDefault();
 
         const customizationData = {
+            // Object to store the customization data from the form inputs.
             backgroundColor: backgroundColorInput.value,
             font: fontInput.value,
             textSize: textSizeInput.value,
@@ -23,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function applyCustomizations() {
+        // This function retrieves the customization data from local storage and applies it to the page.
         const customizationData = JSON.parse(localStorage.getItem('customizationData'));
 
         if (customizationData) {

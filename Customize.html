@@ -6,11 +6,16 @@
     <title>Customize</title>
 </head>
 <body>
+    <!-- Main heading of the page -->
     <h1>Customize Your Page</h1>
+    
+    <!-- Form for customizing the page -->
     <form id="customizationForm">
+        <!-- Input for selecting background color -->
         <label for="backgroundColor">Background Color:</label>
         <input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff"><br><br>
 
+        <!-- Dropdown for selecting font -->
         <label for="font">Font:</label>
         <select id="font" name="font">
             <option value="Arial">Arial</option>
@@ -18,12 +23,15 @@
             <option value="Times New Roman">Times New Roman</option>
         </select><br><br>
 
+        <!-- Input for selecting text size -->
         <label for="textSize">Text Size:</label>
         <input type="number" id="textSize" name="textSize" min="10" max="72" value="16"><br><br>
 
+        <!-- Input for selecting text color -->
         <label for="textColor">Text Color:</label>
         <input type="color" id="textColor" name="textColor" value="#000000"><br><br>
 
+        <!-- Dropdown for selecting border style -->
         <label for="borderStyle">Border Style:</label>
         <select id="borderStyle" name="borderStyle">
             <option value="none">None</option>
@@ -32,9 +40,11 @@
             <option value="dotted">Dotted</option>
         </select><br><br>
 
+        <!-- Button to save customization -->
         <button type="submit">Save Customization</button>
     </form>
     <br>
+    <!-- Link to navigate back to the home page -->
     <a href="index.html">Back to Home</a>
 </body>
 </html>
