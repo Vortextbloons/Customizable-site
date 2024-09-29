@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const backgroundColorInput = document.getElementById('backgroundColor');
     const fontInput = document.getElementById('font');
     const textSizeInput = document.getElementById('textSize');
-    const textColorInput = document.getElementById('textColor'); // P0bae
-    const borderStyleInput = document.getElementById('borderStyle'); // P0bae
+    const textColorInput = document.getElementById('textColor');
+    const borderStyleInput = document.getElementById('borderStyle');
 
     customizationForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
             backgroundColor: backgroundColorInput.value,
             font: fontInput.value,
             textSize: textSizeInput.value,
-            textColor: textColorInput.value, // Pfc94
-            borderStyle: borderStyleInput.value // Pfc94
+            textColor: textColorInput.value,
+            borderStyle: borderStyleInput.value
         };
 
         localStorage.setItem('customizationData', JSON.stringify(customizationData));
@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.fontSize = customizationData.textSize + 'px';
             }
 
-            if (customizationData.textColor) { // Pd59e
-                document.body.style.color = customizationData.textColor; // Pd59e
+            if (customizationData.textColor) {
+                document.body.style.color = customizationData.textColor;
             }
 
-            if (customizationData.borderStyle) { // Pd59e
-                document.getElementById('content').style.borderStyle = customizationData.borderStyle; // Pd59e
+            if (customizationData.borderStyle) {
+                document.getElementById('content').style.borderStyle = customizationData.borderStyle;
             }
         }
     }
