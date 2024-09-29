@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Customize Your Page</h1>
-    <form id="customizationForm">
+    <form id="customizationForm" onsubmit="saveCustomization(event)">
         <label for="backgroundColor">Background Color:</label>
         <input type="color" id="backgroundColor" name="backgroundColor" value="#ffffff"><br><br>
 
@@ -36,5 +36,6 @@
     </form>
     <br>
     <a href="index.html">Back to Home</a>
+    <script src="Script.js"></script>
 </body>
 </html>

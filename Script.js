@@ -1,3 +1,19 @@
+function saveCustomization(event) {
+    event.preventDefault();
+
+    const customizationData = {
+        backgroundColor: document.getElementById('backgroundColor').value,
+        font: document.getElementById('font').value,
+        textSize: document.getElementById('textSize').value,
+        textColor: document.getElementById('textColor').value,
+        borderStyle: document.getElementById('borderStyle').value
+    };
+
+    localStorage.setItem('customizationData', JSON.stringify(customizationData));
+
+    alert('Customization saved!');
+}
+
 function applyCustomizations() {
     const customizationData = JSON.parse(localStorage.getItem('customizationData'));
 
@@ -25,28 +41,5 @@ function applyCustomizations() {
 }
 
 window.addEventListener('load', function() {
-    const customizationForm = document.getElementById('customizationForm');
-    const backgroundColorInput = document.getElementById('backgroundColor');
-    const fontInput = document.getElementById('font');
-    const textSizeInput = document.getElementById('textSize');
-    const textColorInput = document.getElementById('textColor');
-    const borderStyleInput = document.getElementById('borderStyle');
-
-    customizationForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const customizationData = {
-            backgroundColor: backgroundColorInput.value,
-            font: fontInput.value,
-            textSize: textSizeInput.value,
-            textColor: textColorInput.value,
-            borderStyle: borderStyleInput.value
-        };
-
-        localStorage.setItem('customizationData', JSON.stringify(customizationData));
-
-        alert('Customization saved!');
-    });
-
     applyCustomizations();
 });
